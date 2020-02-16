@@ -126,20 +126,20 @@
     <div id="nuevo_cli">
         
         <div id="form">
-        <form action="" method="POST" class="crear">
+        <form action="" method="GET" class="crear">
         <h3>Ingrese datos si es nuevo cliente</h3>
-          <p>Nombre</p>  <input type="text" placeholder="Ingrese su nombre" id="nombre" required pattern="" minlength="3" maxlength="100"></input>
-          <p>Direccion</p>  <input type="number" placeholder="Ingrese la direccion" id="direccion" required pattern="" minlength="5" maxlength="100"></input>
-          <p>Telefono</p>  <input type="tel" placeholder="Ingrese el telefono" id="telefono" required pattern="" minlength="7" maxlength="20"></input>
-          <p>Cedula / NIT</p>  <input type="number" placeholder="Ingrese cedula o nit " id="id/nit" required pattern="" minlength="5" maxlength="100"></input>
-          <p>Tipo</p>   <select name="tipo" id="tipo" required>
+          <p>Nombre</p>  <input type="text" placeholder="Ingrese su nombre" name ="nombre" id="nombre" required  minlength="3" maxlength="100"></input>
+          <p>Direccion</p>  <input type="text" placeholder="Ingrese la direccion" name="direccion" id="direccion" required  minlength="5" maxlength="100"></input>
+          <p>Telefono</p>  <input type="tel" placeholder="Ingrese el telefono" id="telefono" name="telefono required  minlength="7" maxlength="20"></input>
+          <p>Cedula / NIT</p>  <input type="number" placeholder="Ingrese cedula o nit " id="id/nit" name="id/nit" required  minlength="5" maxlength="100"></input>
+          <p>Tipo</p>   <select name="tipo" id="tipo" required name="tipo">
                  <option value="empresa">Empresa</option>
                  <option value="cliente"> Cliente</option>
              </select>
 
              <button type="submit">CREAR</button>           
         </form>
-           <form action="" method="POST" class="ingreso">
+           <form action="" method="GET" class="ingreso">
                <h3>Ingrese si ya es usuario</h3>
             <p>Nombre</p><input type="text" placeholder="Ingrese nombre de usuario" id="nombre" required >
             <p>Contraseña</p> <input type="password" placeholder="Contraseña" id="contraseña" required>
