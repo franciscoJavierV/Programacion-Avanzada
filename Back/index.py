@@ -9,7 +9,7 @@ import json
 app = Flask(__name__, template_folder="../Front", static_folder="../Front")
 
 ###ruta renderizado de index
-@app.route('/', methods=['GET'] )
+@app.route('/index.html', methods=['GET'] )
 def index(): 
     try:
         nombre = request.args.get('nombre')
