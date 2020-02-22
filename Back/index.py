@@ -41,11 +41,9 @@ def index():
 
 
         
- ### ruta renderizado de pedir   
-@app.route('/pedir.html')
-def pedir():
-    return render_template("pedir.html")
-### ruta renderizado de clientes    
+
+
+    ### ruta renderizado de clientes    
 @app.route('/clientes.html')
 def clientes():
     return render_template("clientes.html")
