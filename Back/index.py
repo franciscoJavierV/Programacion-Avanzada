@@ -8,6 +8,8 @@ import json
 
 app = Flask(__name__, template_folder="../Front", static_folder="../Front")
 
+
+
 ###ruta renderizado de index
 @app.route('/index.html', methods=['GET'] )
 def index(): 
@@ -27,8 +29,23 @@ def index():
  ### ruta renderizado de pedir   
 @app.route('/pedir.html')
 def pedir():
-    return render_template("pedir.html")
-### ruta renderizado de clientes    
+    try:
+        Cliente = request.args.get('Cliente')
+        Pastel = request.args.get('Pastel')
+        Fecha = request.args.get('Fecha')
+        Descripcion = request.args.get('Descripcion')
+        tipo = request.args.get('tipo')
+        fresa = request.args.get('fresa')
+        chocolate = request.args.get('chocolate')        
+        if (Cliente != ''):
+            return 'Hola ' + Cliente +  '  Hola '+Pastel + ' Hola ' + Descripcion  + ' Hola '+ tipo + ' Hola '+fresa + 'hola' + chocolate
+        else:
+            return render_template('pedir.html')
+    except:
+        return render_template('pedir.html')
+    
+
+    ### ruta renderizado de clientes    
 @app.route('/clientes.html')
 def clientes():
     return render_template("clientes.html")
