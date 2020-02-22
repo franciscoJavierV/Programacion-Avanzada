@@ -27,18 +27,29 @@ def index():
         return render_template('index.html')
         
  ### ruta renderizado de pedir   
-@app.route('/pedir.html')
+@app.route('/pedir.html', methods = ['GET'])
 def pedir():
+    ingredientes = []
     try:
         Cliente = request.args.get('Cliente')
         Pastel = request.args.get('Pastel')
         Fecha = request.args.get('Fecha')
         Descripcion = request.args.get('Descripcion')
         tipo = request.args.get('tipo')
-        fresa = request.args.get('fresa')
-        chocolate = request.args.get('chocolate')        
+        porciones = request.args.get('porciones')
+
+        if (request.args.get('fresa') != ''):
+            fresa = request.args.get('fresa')
+            ingredientes.append(fresa)
+        if (request.args.get('chocolate') != ''):
+            chocolate = request.args.get('chocolate')
+            ingredientes.append(chocolate)
+        if (request.args.get('mani') != ''):
+            mani = request.args.get('mani')
+            ingredientes.append(mani)
+              
         if (Cliente != ''):
-            return 'Hola ' + Cliente +  '  Hola '+Pastel + ' Hola ' + Descripcion  + ' Hola '+ tipo + ' Hola '+fresa + 'hola' + chocolate
+            return "cliente" + Cliente + "pastel" + Pastel + "fecha" + Fecha + "descp" + Descripcion + "tipo" + tipo + "porciones" + porciones 
         else:
             return render_template('pedir.html')
     except:

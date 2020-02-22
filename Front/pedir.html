@@ -66,22 +66,18 @@
             font-family: Arial, Helvetica, sans-serif;
         }
         form{
-            width: fit-content;
-            padding: 20px;
-            border: 5px solid lightblue;
-            border-radius: 0;              
-            box-sizing: border-box;
-            border-bottom-color: border;
-            background:transparent;
-            text-align: center;
-            float: left;
-        }
+         margin: 10px auto;
+         width: 300px;
+         background-color: white;
+         padding: 15px;
+         border: solid 1px  #000;
+     }
         .crear{
             margin-right: 200px;
             margin-left: 300px;
         }
         input , select, button{
-            color: 999;
+            color: #999;
             border: 1px solid #393939;
             border-radius: 5px 5px 5px 5px;
             font-size: medium;
@@ -91,11 +87,7 @@
             font-size: large;
             text-align:center;
             padding: 10px;
-        }
-        h1{
-            text-align: center;
-            font-size: 50px;
-            padding: 40px;
+            color: lightblue;
         }
         button{
             width: 90%;
@@ -120,10 +112,10 @@
     <div id="form">
         <form action="" method="GET" class="crear">
         <h3>Ingrese peticion de pastel</h3>
-          <p>Nombre del cliente o empresa</p>  <input type="text" placeholder="Ingrese nombre del pastel" name ="Cliente" id="Cliente" required  minlength="3" maxlength="100"></input>
+          <p>Nombre del cliente o empresa</p>  <input type="text" placeholder="Ingrese cliente solicitante" name ="Cliente" id="Cliente" required  minlength="3" maxlength="100"></input>
           <p>Pastel</p>  <input type="text" placeholder="Ingrese nombre del pastel " name="Pastel" id="Pastel" required  minlength="0" maxlength="100"></input>
           <p>Fecha</p>  <input type="date" placeholder="Fecha en la que requiere el pastel" id="Fecha" name="Fecha" required  minlength="0" maxlength="100"></input>  
-          <p>Descripcion</p>  <input type="text" placeholder="Describa el pastel" id="Descripcion" name="Descripcion" required  minlength="0" maxlength="100"></input>
+          <p>Descripcion</p>  <textarea rows="10"  placeholder="Describa el pastel" id="Descripcion" name="Descripcion" required  minlength="0" maxlength="100"></textarea>
                  
           <p>Tipo de pastel</p><select name="tipo" id="tipo" required name="tipo">
                  <option value="matrimonio">Matrimonio</option>
@@ -132,7 +124,7 @@
                  <option value="cumple">Cumpleaños</option>                 
              </select>
 
-            <p>Peso mínimo</p>  <input type="text" placeholder="Ingrese peso del pastel" name ="Peso" id="Peso" required  minlength="3" maxlength="100"></input>
+            <p>Porciones</p>  <input type="number" placeholder="Ingrese cantidad de porciones" name ="porciones" id="porciones" required  minlength="1" maxlength="40"></input>
             
             <div id="ingredientes"> 
              <input type="checkbox" id="fresa" name="fresa" value="fresa">
@@ -141,8 +133,7 @@
              <label for=""> Chocolate</label><br>
              <input type="checkbox" id="mani" name="mani" value="mani">
              <label for=""> Mani</label><br>
-            
-             <button type="button">Agregar ingredientes</button>
+        
             </div> 
              <button type="submit">Solicitar mi pastel</button>           
         </form>
