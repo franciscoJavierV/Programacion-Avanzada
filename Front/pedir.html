@@ -120,25 +120,29 @@
     <div id="form">
         <form action="" method="GET" class="crear">
         <h3>Ingrese peticion de pastel</h3>
-          <p>Nombre del cliente o empresa</p>  <input type="text" placeholder="Ingrese nombre del pastel" name ="nombre" id="nombre" required  minlength="3" maxlength="100"></input>
-          <p>Pastel</p>  <input type="text" placeholder="Ingrese nombre del pastel " name="pastel" id="pastel" required  minlength="0" maxlength="100"></input>
-          <p>Fecha</p>  <input type="date" placeholder="Fecha en la que requiere el pastel" id="fecha" name="fecha" required  minlength="0" maxlength="100"></input>  
-          <p>Descripcion</p>  <input type="text" placeholder="Describa el pastel" id="descripcion" name="descripcion" required  minlength="0" maxlength="100"></input>
+          <p>Nombre del cliente o empresa</p>  <input type="text" placeholder="Ingrese nombre del pastel" name ="Cliente" id="Cliente" required  minlength="3" maxlength="100"></input>
+          <p>Pastel</p>  <input type="text" placeholder="Ingrese nombre del pastel " name="Pastel" id="Pastel" required  minlength="0" maxlength="100"></input>
+          <p>Fecha</p>  <input type="date" placeholder="Fecha en la que requiere el pastel" id="Fecha" name="Fecha" required  minlength="0" maxlength="100"></input>  
+          <p>Descripcion</p>  <input type="text" placeholder="Describa el pastel" id="Descripcion" name="Descripcion" required  minlength="0" maxlength="100"></input>
                  
           <p>Tipo de pastel</p><select name="tipo" id="tipo" required name="tipo">
-                 <option value="ing">ing1</option>
-                 <option value="ing">ing2</option>
-                 <option value="ing">ing2</option>
-                 <option value="ing">ing2</option>
-                 <option value="ing">ing2</option>
+                 <option value="matrimonio">Matrimonio</option>
+                 <option value="divorsio">Divorsio</option>
+                 <option value="fiesta15">Fiesta 15 años</option>
+                 <option value="cumple">Cumpleaños</option>                 
              </select>
-            <div id="ingredientes"> 
-             <input type="checkbox" id="ing1" name="ing1" value="ing1">
-             <label for="ing1"> ing1</label><br>
-             <input type="checkbox" id="ing2" name="ing2" value="ing2">
-             <label for="ing2"> ing2</label><br>
 
-             <button type="submit">Agregar ingredientes</button>
+            <p>Peso mínimo</p>  <input type="text" placeholder="Ingrese peso del pastel" name ="Peso" id="Peso" required  minlength="3" maxlength="100"></input>
+            
+            <div id="ingredientes"> 
+             <input type="checkbox" id="fresa" name="fresa" value="fresa">
+             <label for=""> Fresa </label><br>
+             <input type="checkbox" id="chocolate" name="chocolate" value="chocolate">
+             <label for=""> Chocolate</label><br>
+             <input type="checkbox" id="mani" name="mani" value="mani">
+             <label for=""> Mani</label><br>
+            
+             <button type="button">Agregar ingredientes</button>
             </div> 
              <button type="submit">Solicitar mi pastel</button>           
         </form>
